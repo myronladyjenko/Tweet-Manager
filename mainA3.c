@@ -7,6 +7,8 @@ int main()
     char choiceStr[101]; 
     int choice = 0; 
 
+    tweet * head = NULL;
+
     do {
             printf ("\n1. Create a new tweet\n");
             printf ("2. Display tweets\n");
@@ -21,7 +23,7 @@ int main()
             // user input for the options provided in the menu (chekcs for invalid type input
             while (checkCurr < 1) 
             {
-               printf ("Enter your choice. Please choose from 1 to 9: ");
+               printf ("Choose a menu option. Please choose from 1 to 9: ");
                fgets(choiceStr, 100, stdin);
              
                for (int i = 0; choiceStr[i] != '\n'; i++)
@@ -46,7 +48,12 @@ int main()
             switch (choice) 
             {
                 case 1:
-                  printf("Calls: createTweet.c\n");
+                  printf("\nCalls: createTweet.c\n");
+                  head = createTweet(head);
+                  printf("%s\n%s\n%d\n", head -> user, head -> text, head -> id);
+                  if (head -> next != NULL)
+                  printf("%s\n%s\n%d\n", (head -> next) -> user, (head -> next) -> text, (head -> next) -> id);
+                  
                   break;
 
                 case 2:

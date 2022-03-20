@@ -1,8 +1,8 @@
 CC=gcc
 CFLAGS=-Wall -std=c99
 
-ladyjenkoMyronA3: addNodeToList.o sortID.o loadTweetsFromFile.o saveTweetsToFile.o deleteTweet.o countStopWords.o searchTweetsByKeyword.o displayTweets.o createTweet.o mainA3.o
-	$(CC) $(CFLAGS) addNodeToList.o sortID.o loadTweetsFromFile.o saveTweetsToFile.o deleteTweet.o countStopWords.o searchTweetsByKeyword.o displayTweets.o createTweet.o mainA3.o -o ladyjenkoMyronA3
+ladyjenkoMyronA3: addNodeToList.o sortID.o loadTweetsFromFile.o saveTweetsToFile.o deleteTweet.o countStopWords.o searchTweetsByKeyword.o displayTweets.o createTweet.o searchTweet.o mainA3.o
+	$(CC) $(CFLAGS) addNodeToList.o sortID.o loadTweetsFromFile.o saveTweetsToFile.o deleteTweet.o countStopWords.o searchTweetsByKeyword.o displayTweets.o createTweet.o searchTweet.c mainA3.o -o ladyjenkoMyronA3
 
 addNodeToList.o: addNodeToList.c
 	$(CC) $(CFLAGS) -c addNodeToList.c
@@ -30,6 +30,9 @@ displayTweets.o: displayTweets.c
 
 createTweet.o: createTweet.c
 	$(CC) $(CFLAGS) -c createTweet.c
+
+searchTweet.o: searchTweet.c
+	$(CC) $(CFLAGS) -c searchTweet.c
 
 mainA3.o: mainA3.c
 	$(CC) $(CFLAGS) -c mainA3.c

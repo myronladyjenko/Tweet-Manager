@@ -28,6 +28,6 @@ void loadTweetsFromFile(tweet ** tweetList);
 void sortID (tweet ** head);
 
 // linked list function - required after you create a tweet or load tweets from a file
-void addNodeToList(tweet**tweetList,tweet * node);
+void addNodeToList(tweet ** tweetList, tweet * node);
 
 
