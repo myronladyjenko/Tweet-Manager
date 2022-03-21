@@ -1,6 +1,5 @@
 #include "headerA3.h"
 #include "headerHelperA3.h"
-
 int main()
 {
     int checkCurr = 0;
@@ -50,22 +49,24 @@ int main()
                 case 1:
                   printf("\nCalls: createTweet.c\n");
                   head = createTweet(head);
-                  printf("%s\n%s\n%d\n", head -> user, head -> text, head -> id);
-                  if (head -> next != NULL)
-                  printf("%s\n%s\n%d\n", (head -> next) -> user, (head -> next) -> text, (head -> next) -> id);
-                  
                   break;
 
                 case 2:
                     printf("Calls: displayTweets.c\n");
+                    displayTweets(head);
                     break;
 
                 case 3:
                     printf("Calls: searchTweetsByKeyword.c\n");
+                    if (searchTweetsByKeyword(head) == 0)
+                    {
+                        printf("No matches has been found\n");
+                    }
                     break;
 
                 case 4:
                     printf("Calls: countStopWords.c\n");
+                    countStopWords(head);
                     break;
 
                 case 5:
