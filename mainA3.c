@@ -58,7 +58,7 @@ int main()
 
                 case 3:
                     printf("Calls: searchTweetsByKeyword.c\n");
-                    if (searchTweetsByKeyword(head) == 0)
+                    if (searchTweetsByKeyword(head) == -1)
                     {
                         printf("No matches has been found\n");
                     }
@@ -76,10 +76,12 @@ int main()
 
                 case 6:
                     printf("Calls: saveTweetsToFile.c\n");
+                    saveTweetsToFile(head);
                     break;
 
                 case 7:
                     printf("Calls: loadTweetsFromFile.c\n");
+                    loadTweetsFromFile(&head);
                     break;
 
                 case 8:

@@ -53,6 +53,6 @@ int searchTweetsByKeyword(tweet * tweetList)
     }
     else
     {
-        return 0;
+        return -1;
     }
 }
