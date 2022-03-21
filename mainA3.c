@@ -71,6 +71,7 @@ int main()
 
                 case 5:
                     printf("Calls: deleteTweet.c\n");
+                    deleteTweet(&head);
                     break;
 
                 case 6:
