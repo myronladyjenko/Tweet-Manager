@@ -1,7 +1,8 @@
-#include "headerA3.h"
+#include "headerHelperA3.h"
 
 void loadTweetsFromFile(tweet ** tweetList)
 {
+    srand(time(NULL));
     FILE *fptr = NULL;
 
     char fileName[50];
@@ -62,6 +63,15 @@ void loadTweetsFromFile(tweet ** tweetList)
             }
             
             count = 0;
+
+            int sum = ptr -> id;
+
+            while (searchTweet(*tweetList, sum) != NULL)
+            {
+                // printf("ENTERS?\n");
+                sum = sum + (rand() % 1000);
+            }
+
             addNodeToList(tweetList, ptr);
         }
     }

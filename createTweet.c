@@ -1,4 +1,3 @@
-#include "headerA3.h"
 #include "headerHelperA3.h"
 
 tweet * createTweet(tweet * tweetList)
@@ -30,14 +29,11 @@ tweet * createTweet(tweet * tweetList)
    while (searchTweet(tweetList, sum) != NULL)
    {
       // printf("ENTERS?\n");
-      sum = sum + (rand() % 10 + 1);
+      sum = sum + (rand() % 1000);
    }
 
    ptr -> id = sum;
    // printf("Sum: %d\n", ptr -> id);
 
-   addNodeToList(&tweetList, ptr);
-   // printf("List: %d\n", tweetList -> id);
-
-   return tweetList;
+   return ptr;
 }

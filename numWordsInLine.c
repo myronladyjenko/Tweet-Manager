@@ -1,4 +1,3 @@
-#include "headerA3.h"
 #include "headerHelperA3.h"
 
 int numWordsInLine(char arr[141], char word[10])
@@ -9,17 +8,17 @@ int numWordsInLine(char arr[141], char word[10])
     // printf("arr: %s; word: %s\n", arr, word);
 
     int count = 0;
-    token = strtok(arrCopy, " ");
+    token = strtok(arrCopy, ", ");
 
     while (token != NULL)
     {
         if (strcmp(token, word) == 0)
         {
-            printf("HERE\n");
+            // printf("HERE\n");
             count++;
         }
 
-        token = strtok(NULL, " ");
+        token = strtok(NULL, ", ");
     }
 
     return count;

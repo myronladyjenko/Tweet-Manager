@@ -1,4 +1,3 @@
-#include "headerA3.h"
 #include "headerHelperA3.h"
 
 tweet * searchTweet(tweet * tweetList, int sum)

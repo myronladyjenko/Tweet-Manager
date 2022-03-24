@@ -1,9 +1,13 @@
-#include "headerA3.h"
 #include "headerHelperA3.h"
+
 int main()
-{
+{   
     int checkCurr = 0;
-    char choiceStr[101]; 
+    char * choiceStr;
+    unsigned long size = 2;
+    choiceStr = malloc(sizeof(char) * size); 
+
+    int num_bytes = 0;
     int choice = 0; 
 
     tweet * head = NULL;
@@ -23,24 +27,30 @@ int main()
             while (checkCurr < 1) 
             {
                printf ("Choose a menu option. Please choose from 1 to 9: ");
-               fgets(choiceStr, 100, stdin);
-             
-               for (int i = 0; choiceStr[i] != '\n'; i++)
+               num_bytes = getline (&choiceStr, &size, stdin);
+
+               if (num_bytes == -1)
                {
-                  
-                  if ( isdigit(choiceStr[i]) ) 
-                  {  
-                    checkCurr = 1;
-                  }
-                  else
-                  {
-                     checkCurr = 0;
-                     break;
-                  }     
+                   continue;
                }
+        
+                for (int i = 0; choiceStr[i] != '\n'; i++)
+                {
+                    if ( isdigit(choiceStr[i]) ) 
+                    {  
+                        checkCurr = 1;
+                    }
+                    else
+                    {
+                        checkCurr = 0;
+                        break;
+                    }     
+                }
+                
             }
 
             checkCurr = 0;
+            // 
             choice = atoi(choiceStr);
             
             // swithc statement for each of the options provided in the menu
@@ -48,7 +58,12 @@ int main()
             {
                 case 1:
                   printf("\nCalls: createTweet.c\n");
-                  head = createTweet(head);
+                  // head = createTweet(head);
+                  addNodeToList(&head, createTweet(head));
+                  if (head == NULL)
+                  {
+                      printf("HELLO ERIC\n");
+                  }
                   break;
 
                 case 2:
@@ -86,6 +101,7 @@ int main()
 
                 case 8:
                     printf("Calls: sortID.c\n");
+                    sortID(&head);
                     break;
 
                 case 9:
