@@ -33,12 +33,6 @@ void loadTweetsFromFile(tweet ** tweetList)
 
             while (count != 3 && token != NULL)
             {
-                if (count == 2)
-                {
-                    strcpy(ptr -> text, token);
-                    break;
-                }
-
                 if (count == 0)
                 {
                     ptr -> id = atoi(token);
@@ -49,15 +43,12 @@ void loadTweetsFromFile(tweet ** tweetList)
                     strcpy(ptr -> user, token);
                 }
 
-                if (count != 1)
+                if (count == 2)
                 {
-                    token = strtok(NULL, ",");
-                }
-                else
-                {
-                    token = strtok(NULL, "\n");
+                    strcpy(ptr -> text, token);
                 }
 
+                token = strtok(NULL, ",");
                 count++;
             }
             

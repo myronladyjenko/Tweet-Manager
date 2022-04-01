@@ -2,6 +2,10 @@
 
 tweet * createTweet(tweet * tweetList)
 {
+   char * userName = NULL;
+   char * userText = NULL;
+   userName = malloc(sizeof(char) * 10000);
+   userText = malloc(sizeof(char) * 10000);
    srand(time(NULL));
 
    int sum = 0;
@@ -9,13 +13,24 @@ tweet * createTweet(tweet * tweetList)
    ptr = malloc (sizeof(tweet));
    ptr -> next = NULL;
    
-   printf("Enter a username: ");
-   fgets(ptr -> user, 51, stdin);
-   ptr -> user[strlen(ptr -> user) - 1] = '\0'; 
+   do {
+      printf("Enter a username (<= 50 characters): ");
+      fgets(userName, 51, stdin);
+      userText[strlen(userName) - 1] = '\0';
+   } while (strlen(userName) > 50 || strlen(userName) <= 0);
 
-   printf("Enter the user’s tweet: ");
-   fgets(ptr -> text, 141, stdin);
-   ptr -> text[strlen(ptr -> text) - 1] = '\0';
+   strcpy(ptr -> user, userName);
+   
+   do {
+      printf("PLease, enter the user’s tweet (<=140 characters): ");
+      fgets(userText, 10000, stdin);
+      userText[strlen(userText) - 1] = '\0';
+   } while (strlen(userText) > 140 || strlen(userName) <= 0);
+
+   strcpy(ptr -> text, userText);
+   
+   free(userName);
+   free(userText);
 
    for (int i = 0; ptr -> user[i] != '\0'; i++)
    {
