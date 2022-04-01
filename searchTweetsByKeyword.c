@@ -6,7 +6,6 @@ int searchTweetsByKeyword(tweet * tweetList)
     int count = 0; 
     int count1 = 0;
     int flag = 0;
-    char * match = NULL;
     char word[50];
     char wordLower[50];
     char textLower[141];
@@ -34,9 +33,8 @@ int searchTweetsByKeyword(tweet * tweetList)
         }
 
         textLower[count] = '\0';
-        match = strstr(textLower, wordLower);
 
-        if (match != NULL)
+        if (strstr(textLower, wordLower) != NULL)
         {
             flag = 1; 
             printf("Mathc found for '%s': uogsocis wrote: \"%s\"\n", word, temp -> text);

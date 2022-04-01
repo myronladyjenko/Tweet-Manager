@@ -60,10 +60,6 @@ int main()
                   printf("\nCalls: createTweet.c\n");
                   // head = createTweet(head);
                   addNodeToList(&head, createTweet(head));
-                  if (head == NULL)
-                  {
-                      printf("HELLO ERIC\n");
-                  }
                   break;
 
                 case 2:
@@ -115,5 +111,19 @@ int main()
       
       checkCurr = 0;
     } while (choice != 9);
+
+    // free the linked list
+    tweet * temp = NULL;
+
+    while (head != NULL)
+    {
+        temp = head;
+        head = head -> next;
+        free(temp);
+    }
+
+    free(choiceStr);
+
+    return 0;
     
 }

@@ -41,7 +41,6 @@ void loadTweetsFromFile(tweet ** tweetList)
 
                 if (count == 0)
                 {
-                    printf("Id: %d\n", atoi(token));
                     ptr -> id = atoi(token);
                 }
 

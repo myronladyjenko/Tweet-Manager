@@ -1,8 +1,8 @@
 CC=gcc
 CFLAGS=-Wall -std=c99
 
-ladyjenkoMyronA3: addNodeToList.o sortID.o loadTweetsFromFile.o saveTweetsToFile.o deleteTweet.o countStopWords.o searchTweetsByKeyword.o displayTweets.o createTweet.o searchTweet.o numWordsInLine.o helper.o mainA3.o
-	$(CC) $(CFLAGS) addNodeToList.o sortID.o loadTweetsFromFile.o saveTweetsToFile.o deleteTweet.o countStopWords.o searchTweetsByKeyword.o displayTweets.o createTweet.o searchTweet.o numWordsInLine.o helper.c mainA3.o -o ladyjenkoMyronA3
+ladyjenkoMyronA3: addNodeToList.o sortID.o loadTweetsFromFile.o saveTweetsToFile.o deleteTweet.o countStopWords.o searchTweetsByKeyword.o displayTweets.o createTweet.o helper.o mainA3.o
+	$(CC) $(CFLAGS) addNodeToList.o sortID.o loadTweetsFromFile.o saveTweetsToFile.o deleteTweet.o countStopWords.o searchTweetsByKeyword.o displayTweets.o createTweet.o helper.c mainA3.o -o ladyjenkoMyronA3
 
 addNodeToList.o: addNodeToList.c headerA3.h headerHelperA3.h
 	$(CC) $(CFLAGS) -c addNodeToList.c
@@ -30,12 +30,6 @@ displayTweets.o: displayTweets.c headerA3.h headerHelperA3.h
 
 createTweet.o: createTweet.c headerA3.h headerHelperA3.h
 	$(CC) $(CFLAGS) -c createTweet.c
-
-searchTweet.o: searchTweet.c headerA3.h headerHelperA3.h
-	$(CC) $(CFLAGS) -c searchTweet.c 
-
-numWordsInLine.o: numWordsInLine.c headerA3.h headerHelperA3.h
-	$(CC) $(CFLAGS) -c numWordsInLine.c	
 
 helper.o: helper.c headerA3.h headerHelperA3.h
 	$(CC) $(CFLAGS) -c helper.c	
