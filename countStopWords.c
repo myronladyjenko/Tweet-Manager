@@ -3,7 +3,8 @@
 void countStopWords(tweet * tweetList)
 {
     char listOfWords[25][10];
-    char tweetLine[141];
+    char textLower[142];
+    int count = 0;
     tweet * temp = tweetList;
     int sumStopWords = 0;
     int numberOfTweets = 0;
@@ -37,12 +38,21 @@ void countStopWords(tweet * tweetList)
     while (temp != NULL)
     {
         numberOfTweets++;
-        strcpy(tweetLine, temp -> text);
+        strcpy(textLower, temp -> text);
+
+        for (count = 0; temp -> text[count] != '\0';)
+        {
+            textLower[count] = tolower(temp -> text[count]);
+            count++;
+        }
+
+        textLower[count] = '\0';
 
         for (int i = 0; i < 25; i++)
         {
-            sumStopWords += numWordsInLine(tweetLine, listOfWords[i]);
+            sumStopWords += numStopWords(textLower, listOfWords[i]);
         }
+        // printf("%d\n", sumStopWords);
         temp = temp -> next;
     }
 

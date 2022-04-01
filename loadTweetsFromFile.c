@@ -3,11 +3,12 @@
 void loadTweetsFromFile(tweet ** tweetList)
 {
     srand(time(NULL));
-    FILE *fptr = NULL;
+    FILE *fptr = NULL;   
+    tweet * ptr;
 
     char fileName[50];
     char string[300];
-    int count = 0;
+    char * tweetStr = NULL;
     printf("Enter a filename to load from: ");
     scanf("%s", fileName);
 
@@ -20,52 +21,58 @@ void loadTweetsFromFile(tweet ** tweetList)
     }
     else
     {
-        while (!feof(fptr))
+        while (fgets(string, 300, fptr) != NULL)
         {
-            tweet * ptr;
             ptr = malloc (sizeof(tweet));
+            tweetStr = malloc (sizeof(char) * 10000);
             ptr -> next = NULL;
-            fgets(string, 300, fptr);
-            // string[strlen(string) - 1] = '\0';
+            
+            // fgets(string, 300, fptr);
+
+            string[strlen(string) - 1] = '\0';
 
             char * token = NULL;
             token = strtok(string, ",");
 
-            while (count != 3 && token != NULL)
+            if (token != NULL)
             {
-                if (count == 0)
-                {
-                    ptr -> id = atoi(token);
-                }
-
-                if (count == 1)
-                {
-                    strcpy(ptr -> user, token);
-                }
-
-                if (count == 2)
-                {
-                    strcpy(ptr -> text, token);
-                }
-
-                token = strtok(NULL, ",");
-                count++;
+                ptr -> id = atoi(token);
+                // printf("Token: %d ", ptr -> id);
             }
-            
-            count = 0;
 
+            token = strtok(NULL, ",");
+
+            if (token != NULL)
+            {
+                strcpy(ptr -> user, token);
+                // printf("Token: %s\n", ptr -> user);
+            } 
+            
+            token = strtok(NULL, ",");
+            strcpy(tweetStr, token);
+
+            token = strtok(NULL, ",");
+            // printf("token: %s\n", token);
+            while (token != NULL && token[0] != 13)
+            {
+                strcat(tweetStr, ",");
+                strcat(tweetStr, token);
+                token = strtok(NULL, ",");
+            }
+
+            strcpy(ptr -> text, tweetStr);
             int sum = ptr -> id;
 
             while (searchTweet(*tweetList, sum) != NULL)
             {
-                // printf("ENTERS?\n");
                 sum = sum + (rand() % 1000);
             }
 
             addNodeToList(tweetList, ptr);
+            free(tweetStr);
         }
     }
-
+    
     printf("Tweets imported!\n");
     fclose(fptr);
 }
