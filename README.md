@@ -19,16 +19,16 @@ Date of Last Revision: **2022/04/03**.
 
 ## Setup + Compile & Run
 
-#### Clone the repo:
+##### Clone the repo:
     git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git
 
-#### cd to the A3 directory the program:
+##### cd to the A3 directory the program:
     cd A3
 
-#### compile the program using makefile:    
+##### compile the program using makefile:    
     make
 
-#### run the executable:    
+##### run the executable:    
     ./ladyjenkoMyronA3.c
 
 ## Completed Components
