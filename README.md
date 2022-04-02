@@ -13,7 +13,11 @@ Tweet Manager is a simple application that allow the user to do the simple Twitt
     9. Exit
 
 Tweet Manager for the Assignment 3, course CIS*2500 was completed in C by Myron Ladyjenko (username: mladyjen, id: 1172255).  
-_Date of Last Revision: 2022/04/03._
+_Date of Last Revision:_ 2022/04/03.
+
+<details><summary>Click to expand</summary>
+
+</details>
 
 ## Setup + Compile & Run
 
