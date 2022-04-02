@@ -94,7 +94,7 @@ int numStopWords(char arr[141], char word[10])
     {
         if (strcmp(token, word) == 0)
         {
-            // printf("%s %s ", word, token);
+            printf("%s %s ", word, token);
             count++;
         }
 

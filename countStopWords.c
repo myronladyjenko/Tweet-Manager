@@ -52,7 +52,7 @@ void countStopWords(tweet * tweetList)
         {
             sumStopWords += numStopWords(textLower, listOfWords[i]);
         }
-        // printf("%d\n", sumStopWords);
+        printf("%d\n", sumStopWords);
         temp = temp -> next;
     }
 
