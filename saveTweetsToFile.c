@@ -22,11 +22,11 @@ void saveTweetsToFile(tweet * tweetList)
         {
             if (temp -> next == NULL)
             {
-                fprintf(fptr, "%d,%s,%s,", temp -> id, temp -> user, temp -> text);
+                fprintf(fptr, "%d,%s,%s", temp -> id, temp -> user, temp -> text);
             }
             else
             {
-                fprintf(fptr, "%d,%s,%s,\n", temp -> id, temp -> user, temp -> text);
+                fprintf(fptr, "%d,%s,%s\n", temp -> id, temp -> user, temp -> text);
             }
         
             temp = temp -> next;

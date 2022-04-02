@@ -16,7 +16,7 @@ tweet * createTweet(tweet * tweetList)
    do {
       printf("Enter a username (<= 50 characters): ");
       fgets(userName, 51, stdin);
-      userText[strlen(userName) - 1] = '\0';
+      userName[strlen(userName) - 1] = '\0';
    } while (strlen(userName) > 50 || strlen(userName) <= 0);
 
    strcpy(ptr -> user, userName);
@@ -25,7 +25,7 @@ tweet * createTweet(tweet * tweetList)
       printf("PLease, enter the user’s tweet (<=140 characters): ");
       fgets(userText, 10000, stdin);
       userText[strlen(userText) - 1] = '\0';
-   } while (strlen(userText) > 140 || strlen(userName) <= 0);
+   } while (strlen(userText) > 140 || strlen(userText) <= 0);
 
    strcpy(ptr -> text, userText);
    

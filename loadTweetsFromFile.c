@@ -23,31 +23,44 @@ void loadTweetsFromFile(tweet ** tweetList)
     {
         while (fgets(string, 300, fptr) != NULL)
         {
-            ptr = malloc (sizeof(tweet));
+            ptr = calloc (1, sizeof(tweet));
             tweetStr = malloc (sizeof(char) * 10000);
             ptr -> next = NULL;
-            
-            // fgets(string, 300, fptr);
-
             string[strlen(string) - 1] = '\0';
+
+            // delete all trailing spaces
+            int length = strlen(string) - 1;
+            int countSpaces = 0;
+            while (isspace(string[length]) != 0)
+            {
+                // printf("%c\n", string[length]);
+                countSpaces++;
+                length--;
+            }
+            
+            // printf("Spaces: %d\n", countSpaces);
+            string[strlen(string) - countSpaces] = '\0';
+            // printf("String: %s\n", string);
 
             char * token = NULL;
             token = strtok(string, ",");
 
-            if (token != NULL)
+
+            if (token != NULL && token[0] != 13)
             {
                 ptr -> id = atoi(token);
-                // printf("Token: %d ", ptr -> id);
+                // printf("Token: %d \n", ptr -> id);
             }
-
+            
             token = strtok(NULL, ",");
 
-            if (token != NULL)
+            if (token != NULL && token[0] != 13)
             {
-                strcpy(ptr -> user, token);
                 // printf("Token: %s\n", ptr -> user);
+                strcpy(ptr -> user, token);
             } 
             
+            /*
             token = strtok(NULL, ",");
             strcpy(tweetStr, token);
 
@@ -60,7 +73,13 @@ void loadTweetsFromFile(tweet ** tweetList)
                 token = strtok(NULL, ",");
             }
 
-            strcpy(ptr -> text, tweetStr);
+            strcpy(ptr -> text, tweetStr); 
+            */
+
+            token = strtok(NULL, "");
+            token[strlen(token) - 1] = '\0';
+            strcpy(ptr -> text, token); 
+
             int sum = ptr -> id;
 
             while (searchTweet(*tweetList, sum) != NULL)
