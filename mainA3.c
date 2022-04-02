@@ -1,5 +1,11 @@
 #include "headerHelperA3.h"
 
+/******
+main: This is the main function, that calls all the function, based on the user input, stop if user decides to exit the program.
+In: nothing
+Out: int
+Post: supports user-driven menu + prints the error messages for the wrong input
+*******/
 int main()
 {   
     int checkCurr = 0;

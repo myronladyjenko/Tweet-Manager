@@ -1,5 +1,15 @@
 #include "headerHelperA3.h"
 
+/******
+countStopWords: For this function, the program will
+traverse the entire linked list and calculate the number of stop words that are present across all tweets, outputting the
+summation of all tweets. For this program, only the top 25 stop words will be considered:
+"a","an","and","are","as","at","be","by","for","from","has","he","in","is","it","its",
+"of","on","that","the","to","was","were","will","with"
+In: tweet * tweetList
+Out: void
+Post: prints how many tweets were searched and how many stop words were found
+*******/
 void countStopWords(tweet * tweetList)
 {
     char listOfWords[25][10];
@@ -52,7 +62,7 @@ void countStopWords(tweet * tweetList)
         {
             sumStopWords += numStopWords(textLower, listOfWords[i]);
         }
-        printf("%d\n", sumStopWords);
+        // printf("%d\n", sumStopWords);
         temp = temp -> next;
     }
 

@@ -1,5 +1,13 @@
 #include "headerHelperA3.h"
 
+/******
+searchTweetsByKeyword: Searching for tweets in this assignment will be done by keyword. To search for tweets, the linked list
+should be traversed to find all tweets that have the user-provided substring inside them. If a match is found, that
+tweet should be printed to console along with its associated user value. Search is case-insensitive.
+In: tweet * tweetList
+Out: int
+Post: outputs how the tweets where the word was found
+*******/
 int searchTweetsByKeyword(tweet * tweetList)
 {
     tweet * temp = tweetList;

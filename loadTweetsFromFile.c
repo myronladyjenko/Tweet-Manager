@@ -1,5 +1,11 @@
 #include "headerHelperA3.h"
 
+/******
+loadTweetsFromFile: This function load the contents for each tweet into the node, and them adds it into the linked list.
+In: tweet ** tweetList
+Out: void
+Post: prints a succes message if the tweets were imported, and not otherwise.
+*******/
 void loadTweetsFromFile(tweet ** tweetList)
 {
     srand(time(NULL));
@@ -26,7 +32,11 @@ void loadTweetsFromFile(tweet ** tweetList)
             ptr = calloc (1, sizeof(tweet));
             tweetStr = malloc (sizeof(char) * 10000);
             ptr -> next = NULL;
-            string[strlen(string) - 1] = '\0';
+
+            if (string[strlen(string) - 1] == '\n' || string[strlen(string) - 2] == '\n')
+            {
+                string[strlen(string) - 1] = '\0';
+            }
 
             // delete all trailing spaces
             int length = strlen(string) - 1;

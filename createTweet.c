@@ -1,5 +1,15 @@
 #include "headerHelperA3.h"
 
+/******
+createTweet: If this function is called, through the menu, the user should have the option to create a new tweet and fill in some of the parameters for the
+struct manually (namely, the username and user’s tweet). Userid is automatically generated using the following rule:
+userid = (sum of ascii values of characters in the username) + (length of the user’s tweet). For example, for the
+sample given above, the generated userid = (117 + 103 + 111) + 44 = 375. If this userid already exists in the current
+linked list, then add random numbers between 1 and 999, repeatedly, until a unique id is generated.
+In: tweet * tweetList
+Out: tweet *
+Post: the user fill out the cntents for the tweet, and that tweet gets returned.
+*******/
 tweet * createTweet(tweet * tweetList)
 {
    char * userName = NULL;
