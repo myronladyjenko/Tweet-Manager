@@ -1,7 +1,7 @@
 ## Tweet Manager
 
-Tweet Manager is a simple application that allow the user to do the simple Twitter functionality. Tweet Manager for the Assignment 3, course CIS*2500 was completed in C by Myron Ladyjenko (username: mladyjen, id: 1172255).  
-_Date of Last Revision:_ 2022/04/03.
+Tweet Manager is a simple application that allow the user to do the simple Twitter functionality. Tweet Manager for the **Assignment 3**, course **CIS*2500** was completed in **C** by **Myron Ladyjenko** (username: **mladyjen**, id: **1172255**).  
+_Date of Last Revision:_ **2022/04/03**.
 
 The application has the following functionality: 
 
@@ -19,14 +19,14 @@ The application has the following functionality:
 
 1. Clone the repo:
 
-`git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git`
+    - `git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git`
 
 2. Run the program:
 
-- cd to the A3 directory: `cd A3`
-- compile the program using makefile: `make`
-- run the executable: `./ladyjenkoMyronA3.c`
-- exit the program: `9`
+    - cd to the A3 directory: `cd A3`
+    - compile the program using makefile: `make`
+    - run the executable: `./ladyjenkoMyronA3.c`
+    - exit the program: `9`
 
 ## Completed Components
 
