@@ -20,7 +20,7 @@ Date of Last Revision: **2022/04/03**.
 ## Setup + Compile & Run
 
 #### Clone the repo:
-    <div class="snippet-clipboard-content position-relative overflow-auto"><pre><code>git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git</code></pre></div>
+    git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git
 
 #### Run the program:
 
