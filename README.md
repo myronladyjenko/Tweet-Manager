@@ -22,14 +22,14 @@ Date of Last Revision: **2022/04/03**.
 #### Clone the repo:
     git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git
 
-#### Run the program:
+#### cd to the A3 directory the program:
+    cd A3
 
-    1. cd to the A3 directory:
-        <div class="snippet-clipboard-content position-relative overflow-auto"><pre><code>cd A3</code></pre></div>
-    2. ompile the program using makefile:
-        <div class="snippet-clipboard-content position-relative overflow-auto"><pre><code>make</code></pre></div>
-    3. run the executable::
-        <div class="snippet-clipboard-content position-relative overflow-auto"><pre><code>./ladyjenkoMyronA3.c</code></pre></div>
+#### compile the program using makefile:    
+    make
+
+#### run the executable:    
+    ./ladyjenkoMyronA3.c
 
 ## Completed Components
 
