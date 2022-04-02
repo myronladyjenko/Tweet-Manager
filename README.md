@@ -19,7 +19,7 @@ Date of Last Revision: **2022/04/03**.
 
 ## Setup + Compile & Run
 
-[copy] 100OFF[/copy]
+[copy content="100OFF"]
 
 1. Clone the repo:
 
