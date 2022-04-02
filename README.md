@@ -19,11 +19,10 @@ Date of Last Revision: **2022/04/03**.
 
 ## Setup + Compile & Run
 
-[copy content="100OFF"]
-
 1. Clone the repo:
-
-    - `git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git`
+    <code>
+        "git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git"
+    <\code> 
 
 2. Run the program:
 
