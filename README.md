@@ -29,7 +29,7 @@ Date of Last Revision: **2022/04/03**.
     make
 
 ##### run the executable:    
-    ./ladyjenkoMyronA3.c
+    ./ladyjenkoMyronA3
 
 ## Completed Components
 
