@@ -23,7 +23,8 @@ int searchTweetsByKeyword(tweet * tweetList)
 
     printf("Enter a keyword to search: ");
     scanf("%s", word);
-
+    
+    // make the letters in the word be lowercase
     for (int i = 0; word[i] != '\0'; i++)
     {
         wordLower[i] = tolower(word[i]);
@@ -34,6 +35,7 @@ int searchTweetsByKeyword(tweet * tweetList)
 
     while (temp != NULL)
     {
+        // make the letters in the tweet be lowercase
         for (count = 0; temp -> text[count] != '\0';)
         {
             textLower[count] = tolower(temp -> text[count]);
@@ -42,6 +44,7 @@ int searchTweetsByKeyword(tweet * tweetList)
 
         textLower[count] = '\0';
 
+        // count if the keyword is in the tweet 
         if (strstr(textLower, wordLower) != NULL)
         {
             flag = 1; 
@@ -58,6 +61,6 @@ int searchTweetsByKeyword(tweet * tweetList)
     }
     else
     {
-        return -1;
+        return 0;
     }
 }

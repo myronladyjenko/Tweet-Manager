@@ -15,7 +15,9 @@ void deleteTweet(tweet ** tweetList)
     int id = 0;
     tweet * temp1 = *tweetList;
     tweet * temp2 = *tweetList;
-
+    char number[100];
+    
+    // count number of words in the tweet
     while (temp1 != NULL)
     {
         currNumTweets++;
@@ -23,9 +25,24 @@ void deleteTweet(tweet ** tweetList)
     } 
 
     printf("Currently there are %d tweets\n", currNumTweets);
+
+    if (currNumTweets == 0)
+    {
+        printf("The list has no tweets to delete\n");
+        return;
+    }
+
     printf("Which twwet you wish to delete - enter a value between 1 and %d: ", currNumTweets);
-    scanf("%d", &tweetToDelete);
-    
+     
+    fgets(number, 100, stdin);
+    // re-prompt the user for the proper input
+    while (atoi(number) == 0 || atoi(number) > currNumTweets || atoi(number) < 1)
+    {
+        printf("PLease, enter a correct number - enter a value between 1 and %d: ", currNumTweets);
+        fgets(number, 100, stdin); 
+    }
+
+    // delete node 
     if (tweetToDelete == 1)
     {
         id = (*tweetList) -> id;
@@ -41,6 +58,7 @@ void deleteTweet(tweet ** tweetList)
         }
         
         tweet * delete = temp2 -> next;
+        // preserve the id of the deleted node
         id = delete -> id;
         temp2 -> next = temp2 -> next -> next;
         delete -> next = NULL;

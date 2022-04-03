@@ -8,12 +8,14 @@ Post: nothing
 *******/
 void splitList(tweet * head, tweet ** firstList, tweet ** secondList)
 {
+    // create two temp pointers
     tweet * ptr = head;
     tweet * ptrNew = head;
     int numNodes = 0;
     int halfNodes = 0;
     int count = 1;
-
+    
+    // count the number of nodes
     while (ptr != NULL)
     {
        numNodes++;
@@ -21,15 +23,18 @@ void splitList(tweet * head, tweet ** firstList, tweet ** secondList)
     }
 
     halfNodes = numNodes / 2;
-
+    
+    // loop to the half nodes
     while (count < halfNodes)
     {
         count++;
         ptrNew = ptrNew -> next;
     }
-
+    
+    // assign second half of the list (first node in second half) to the secondList
     *secondList = ptrNew -> next;
     ptrNew -> next = NULL;
+    // assign first half of the list (first node in first half) to the firstList
     *firstList = head;
 }
 
@@ -43,16 +48,20 @@ tweet * combineLists(tweet * headFirst, tweet * headSecond)
 {
     tweet * finalList = NULL;
     
+    // base case
     if (headFirst == NULL)
     {
         return headSecond;
     }
-
+    
+    // base case
     if (headSecond == NULL)
     {
         return headFirst;
     }
+    
 
+    // merging lists in ascending order
     if (headFirst -> id < headSecond -> id)
     {
         finalList = headFirst;
@@ -77,15 +86,19 @@ Post: retunrs the number of stop words found in the tweet
 int numStopWords(char arr[141], char word[10])
 {
     char * token = NULL;
+
+    // create a copy of the array
     char arrCopy[141];
     strcpy(arrCopy, arr);
     // printf("arr: %s; word: %s\n", arr, word);
 
     int count = 0;
     token = strtok(arrCopy, " ");
-
+    
+    // loop for through every word (separated by space)
     while (token != NULL)
     {
+        // compare words
         if (strcmp(token, word) == 0)
         {
             // printf("%s %s ", word, token);
@@ -107,7 +120,8 @@ Post: retunrs the node if it was found, otherwise NULL.
 tweet * searchTweet(tweet * tweetList, int sum)
 {
     tweet * temp = tweetList;
-
+    
+    // searches if the sum(id) exists in the list 
     while (temp != NULL)
     {
         if (temp -> id == sum)
@@ -131,18 +145,20 @@ void addNodeToList(tweet** tweetList, tweet * node)
 {
     tweet *temp = *tweetList;
     // printf("Id: %d\n", node -> id);
-
+     
     if (*tweetList == NULL)
     {
         *tweetList = node;
         return;
     }
-
+    
+    // loop to the second last node
     while (temp -> next != NULL)
     {
         temp = temp -> next;
     }
-
+    
+    // insert node
     temp -> next = node;
     return;
 }

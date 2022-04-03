@@ -20,7 +20,8 @@ void saveTweetsToFile(tweet * tweetList)
     scanf("%s", fileName);
 
     fptr = fopen(fileName, "w");
- 
+    
+    // check if the file opened properly
     if (fptr == NULL) 
     {
         printf("Can't open file\n");
@@ -30,6 +31,7 @@ void saveTweetsToFile(tweet * tweetList)
     {
         while (temp != NULL)
         {
+            // write to file
             if (temp -> next == NULL)
             {
                 fprintf(fptr, "%d,%s,%s", temp -> id, temp -> user, temp -> text);

@@ -14,8 +14,13 @@ tweet * createTweet(tweet * tweetList)
 {
    char * userName = NULL;
    char * userText = NULL;
-   userName = malloc(sizeof(char) * 10000);
-   userText = malloc(sizeof(char) * 10000);
+   char * user = NULL;
+   char * text = NULL;
+   userName = malloc(sizeof(char) * 102);
+   userText = malloc(sizeof(char) * 102);
+   user = malloc(sizeof(char) * 52);
+   text = malloc(sizeof(char) * 142);
+   int flag = 0;
    srand(time(NULL));
 
    int sum = 0;
@@ -23,42 +28,95 @@ tweet * createTweet(tweet * tweetList)
    ptr = malloc (sizeof(tweet));
    ptr -> next = NULL;
    
+   // prompt for the username
    do {
+      // clear input
+      while (flag == 1)
+      {
+          // printf("string: %s\n", userName);
+          fgets(userName, 102, stdin);
+
+          if (userName[strlen(userName) - 1] == '\n')
+          {
+              break;
+          }
+      }
+
+      flag = 0;
       printf("Enter a username (<= 50 characters): ");
-      fgets(userName, 51, stdin);
-      userName[strlen(userName) - 1] = '\0';
-   } while (strlen(userName) > 50 || strlen(userName) <= 0);
+      fgets(user, 52, stdin);
 
-   strcpy(ptr -> user, userName);
+      // printf("String: %s\n", user);
+      // printf("Char: %c\n", user[strlen(user) - 1]);
+
+      if (user[strlen(user) - 1] == '\n')
+      {
+         user[strlen(user) - 1] = '\0';
+      } 
+
+      if (strlen(user) > 50 && user[50] != '\n')
+      {
+          flag = 1;
+      }
+      // printf("length: %d\n", strlen( user));
+
+   } while (strlen(user) > 50 && user[50] != '\n');
+    
+   strcpy(ptr -> user, user); 
+   flag = 0;
    
+   // prompt for the tweet
    do {
-      printf("PLease, enter the user’s tweet (<=140 characters): ");
-      fgets(userText, 10000, stdin);
-      userText[strlen(userText) - 1] = '\0';
-   } while (strlen(userText) > 140 || strlen(userText) <= 0);
+      // clear stdin
+      while (flag == 1)
+      {
+          fgets(userText, 102, stdin);
+          if (userText[strlen(userText) - 1] == '\n')
+          {
+              break;
+          } 
+      }
 
-   strcpy(ptr -> text, userText);
+      flag = 0;
+
+      printf("Enter a text for a tweet (<= 140 characters): ");
+      fgets(text, 142, stdin);
+
+      if (text[strlen(text) - 1] == '\n')
+      {
+         text[strlen(text) - 1] = '\0';
+      } 
+
+      if (strlen(text) > 140 && text[140] != '\n')
+      {
+          flag = 1;
+      }
+
+   } while (strlen(text) > 140 && text[140] != '\n');
+   
+   strcpy(ptr -> text, text); 
    
    free(userName);
    free(userText);
-
+   free(user);
+   free(text);
+   
+   // generate the user id
    for (int i = 0; ptr -> user[i] != '\0'; i++)
    {
        sum += (int) (ptr -> user[i]);
    }
 
-   // printf("Sum1: %d\n", sum);
    sum += strlen(ptr -> text);
-   // printf("Sum2: %d\n", sum);
-
+   
+   // generate a unique user id, if the it already exists
    while (searchTweet(tweetList, sum) != NULL)
    {
-      // printf("ENTERS?\n");
       sum = sum + (rand() % 1000);
    }
 
    ptr -> id = sum;
-   // printf("Sum: %d\n", ptr -> id);
+   printf("Your computer generated id is: %d\n", ptr -> id);
 
    return ptr;
 }

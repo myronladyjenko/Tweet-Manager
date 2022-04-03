@@ -63,18 +63,17 @@ int main()
             switch (choice) 
             {
                 case 1:
-                  printf("\nCalls: createTweet.c\n");
-                  // head = createTweet(head);
+                  // printf("\nCalls: createTweet.c\n");
                   addNodeToList(&head, createTweet(head));
                   break;
 
                 case 2:
-                    printf("Calls: displayTweets.c\n");
+                    // printf("Calls: displayTweets.c\n");
                     displayTweets(head);
                     break;
 
                 case 3:
-                    printf("Calls: searchTweetsByKeyword.c\n");
+                    // printf("Calls: searchTweetsByKeyword.c\n");
                     if (searchTweetsByKeyword(head) == -1)
                     {
                         printf("No matches has been found\n");
@@ -82,32 +81,32 @@ int main()
                     break;
 
                 case 4:
-                    printf("Calls: countStopWords.c\n");
+                    // printf("Calls: countStopWords.c\n");
                     countStopWords(head);
                     break;
 
                 case 5:
-                    printf("Calls: deleteTweet.c\n");
+                    // printf("Calls: deleteTweet.c\n");
                     deleteTweet(&head);
                     break;
 
                 case 6:
-                    printf("Calls: saveTweetsToFile.c\n");
+                    // printf("Calls: saveTweetsToFile.c\n");
                     saveTweetsToFile(head);
                     break;
 
                 case 7:
-                    printf("Calls: loadTweetsFromFile.c\n");
+                     // printf("Calls: loadTweetsFromFile.c\n");
                     loadTweetsFromFile(&head);
                     break;
 
                 case 8:
-                    printf("Calls: sortID.c\n");
+                    // printf("Calls: sortID.c\n");
                     sortID(&head);
                     break;
 
                 case 9:
-                    printf("Exiting...\n");
+                    // printf("Exiting...\n");
                     break;
 
                 // validity check for the input for the choice variable 

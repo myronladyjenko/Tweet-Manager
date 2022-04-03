@@ -16,11 +16,13 @@ void sortID (tweet ** head)
     {
         return;
     }
-
+    
+    // recursively split the linked list into two halves
     splitList(ptr, &firstHead, &secondHead);
-
+    
     sortID(&firstHead);
     sortID(&secondHead);
-
+    
+    // combine lists
     *head = combineLists(firstHead, secondHead); 
 }

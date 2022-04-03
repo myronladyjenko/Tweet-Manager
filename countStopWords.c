@@ -44,12 +44,13 @@ void countStopWords(tweet * tweetList)
     strcpy(listOfWords[22], "were");
     strcpy(listOfWords[23], "will");
     strcpy(listOfWords[24], "with");
-
+    
     while (temp != NULL)
     {
         numberOfTweets++;
         strcpy(textLower, temp -> text);
-
+        
+        // lowercase each letter in the tweet
         for (count = 0; temp -> text[count] != '\0';)
         {
             textLower[count] = tolower(temp -> text[count]);
@@ -60,6 +61,7 @@ void countStopWords(tweet * tweetList)
 
         for (int i = 0; i < 25; i++)
         {
+            // call function that looks for a stop word
             sumStopWords += numStopWords(textLower, listOfWords[i]);
         }
         // printf("%d\n", sumStopWords);

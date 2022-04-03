@@ -10,7 +10,8 @@ Post: All the static contents of every tweet
 void displayTweets(tweet * tweetList)
 {
     tweet * temp = tweetList;
-
+    
+    // loop through each element and print its' contents
     while (temp != NULL)
     {
         printf("%d: Created by %s: %s\n", temp -> id, temp -> user, temp -> text);
