@@ -38,37 +38,37 @@ present across all of the tweets.
 
 ##### Main Functionality
 
-    <details><summary>Create new tweet</summary>
-    This function prompts the user for the username and the tweet. Then it automatically creates a unique id for every tweet.  
-    </details>
+<details><summary>Create new tweet</summary>
+This function prompts the user for the username and the tweet. Then it automatically creates a unique id for every tweet.  
+</details>
 
-    <details><summary>Display tweets</summary>
-    This function displays all the stored tweets. 
-    </details>
+<details><summary>Display tweets</summary>
+This function displays all the stored tweets. 
+</details>
 
-    <details><summary>Search a tweet (by keyword)</summary>
-    This function takes prompts the user to enter a keyword and then searches for this keyword in all of the tweets. 
-    </details>
+<details><summary>Search a tweet (by keyword)</summary>
+This function takes prompts the user to enter a keyword and then searches for this keyword in all of the tweets. 
+</details>
 
-    <details><summary>Find how many words are “stop words” (stop words are explained in a later section)</summary>
-    This function takes counts how many stop words all across all the stored tweets.  
-    </details>
+<details><summary>Find how many words are “stop words” (stop words are explained in a later section)</summary>
+This function takes counts how many stop words all across all the stored tweets.  
+</details>
 
-    <details><summary>Delete the nth tweet</summary>
-    This function deletes nth tweet from all the stored tweets and prints the id of it. 
-    </details>
+<details><summary>Delete the nth tweet</summary>
+This function deletes nth tweet from all the stored tweets and prints the id of it. 
+</details>
 
-    <details><summary>Save tweets to a file</summary>
-    This function saves all the stored tweets to the .csv file.
-    </details>
+<details><summary>Save tweets to a file</summary>
+This function saves all the stored tweets to the .csv file.
+</details>
 
-    <details><summary>Load tweets from a file</summary>
-    This function load tweets from the .csv file into the memory (linked list form).
-    </details>
+<details><summary>Load tweets from a file</summary>
+This function load tweets from the .csv file into the memory (linked list form).
+</details>
 
-    <details><summary>Sort the given linked list on userid.</summary>
-    This function sorts all the tweets by the user id. 
-    </details>
+<details><summary>Sort the given linked list on userid.</summary>
+This function sorts all the tweets by the user id. 
+</details>
 
 In addition, since this is a menu-driven program, there are several input streams for the tweets. The first input
 stream is from the command line itself (Menu Option 1). Alternatively, the user can use the seventh option to load a
