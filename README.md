@@ -36,6 +36,10 @@ Date of Last Revision: **2022/04/03**.
 Tweet Manager has a full range of functionality. The user is able to any of the proposed functionality. Users are able to create tweets, display tweets, search tweets based on a keyword or mention, save and load tweets from a local file, and calculate the number of stop words are
 present across all of the tweets.
 
+<details><summary>Create new tweet</summary>
+This function takes
+</details>
+
 In addition, since this is a menu-driven program, there are several input streams for the tweets. The first input
 stream is from the command line itself (Menu Option 1). Alternatively, the user can use the seventh option to load a
 CSV file of tweets into the program. A sample CSV file has been provided for you to test your programs with. Both
