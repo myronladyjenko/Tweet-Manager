@@ -20,6 +20,11 @@ int searchTweetsByKeyword(tweet * tweetList)
 
     wordLower[0] = '0';
     textLower[0] = '0';
+
+    if (temp == NULL)
+    {
+        printf("NOTE: The list is empty.\n");
+    }
     
     do {
         printf("Enter a keyword to search (non-zero length): ");

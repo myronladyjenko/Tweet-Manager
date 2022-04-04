@@ -19,6 +19,11 @@ void countStopWords(tweet * tweetList)
     int sumStopWords = 0;
     int numberOfTweets = 0;
 
+    if (temp == NULL)
+    {
+        printf("NOTE: The list is empty.\n");
+    }
+
     strcpy(listOfWords[0], "a");
     strcpy(listOfWords[1], "an");
     strcpy(listOfWords[2], "and");

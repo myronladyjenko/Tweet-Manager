@@ -12,6 +12,11 @@ void sortID (tweet ** head)
     tweet * firstHead = NULL;
     tweet * secondHead = NULL; 
 
+    if (ptr == NULL)
+    {
+        printf("NOTE: The list is empty.\n");
+    }
+
     if ( (ptr == NULL) || (ptr -> next == NULL) )
     {
         return;

@@ -14,6 +14,10 @@ void saveTweetsToFile(tweet * tweetList)
 {
     FILE *fptr = NULL;
     tweet * temp = tweetList;
+    if (temp == NULL)
+    {
+        printf("NOTE: The list is empty.\n");
+    }
 
     char fileName[50];
     printf("Enter the filename where you would like to store your tweets: ");

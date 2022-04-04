@@ -10,6 +10,11 @@ Post: All the static contents of every tweet
 void displayTweets(tweet * tweetList)
 {
     tweet * temp = tweetList;
+
+    if (temp == NULL)
+    {
+        printf("NOTE: The list is empty.\n");
+    }
     
     // loop through each element and print its' contents
     while (temp != NULL)
