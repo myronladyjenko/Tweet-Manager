@@ -34,17 +34,24 @@ void deleteTweet(tweet ** tweetList)
         return;
     }
 
-    printf("Which twwet you wish to delete - enter a value between 1 and %d: ", currNumTweets);
+    printf("Which twwet you wish to delete - enter a value between 1 and %d (enter -1 if you want to exit the function): ", currNumTweets);
      
     fgets(number, 102, stdin);
     // re-prompt the user for the proper input
-    while (atoi(number) == 0 || atoi(number) > currNumTweets || atoi(number) < 1)
+    while ( (atoi(number) == 0 || atoi(number) > currNumTweets || atoi(number) < 1) && atoi(number) != -1)
     {
-        printf("PLease, enter a correct number - enter a value between 1 and %d: ", currNumTweets);
+        printf("PLease, enter a correct number - enter a value between 1 and %d (enter -1 if you want to exit the function): ", currNumTweets);
         fgets(number, 100, stdin); 
     }
 
     tweetToDelete = atoi(number);
+
+    if (tweetToDelete == -1)
+    {
+        printf("Exiting fucntion...\n");
+        free(number);
+        return;
+    }
 
     // delete node 
     if (tweetToDelete == 1)
