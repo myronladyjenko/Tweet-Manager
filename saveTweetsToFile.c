@@ -32,14 +32,19 @@ void saveTweetsToFile(tweet * tweetList)
         while (temp != NULL)
         {
             // write to file
+            fprintf(fptr, "%d,%s,%s\n", temp -> id, temp -> user, temp -> text);
+
+            // Commented part is for the case when the last line should not a new line at the end
+            /*
             if (temp -> next == NULL)
             {
+                // for the last tweet, write it without the newline
                 fprintf(fptr, "%d,%s,%s", temp -> id, temp -> user, temp -> text);
             }
             else
             {
                 fprintf(fptr, "%d,%s,%s\n", temp -> id, temp -> user, temp -> text);
-            }
+            } */
         
             temp = temp -> next;
         }
