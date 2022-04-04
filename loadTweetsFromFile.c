@@ -72,7 +72,11 @@ void loadTweetsFromFile(tweet ** tweetList)
             } 
 
             token = strtok(NULL, "");
-            token[strlen(token) - 1] = '\0';
+            if (token[strlen(token) - 1] == ',')
+            {
+                token[strlen(token) - 1] = '\0';
+            }
+
             strcpy(ptr -> text, token); 
             
             // add tweet to the list
