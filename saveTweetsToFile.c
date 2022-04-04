@@ -21,7 +21,8 @@ void saveTweetsToFile(tweet * tweetList)
 
     char fileName[50];
     printf("Enter the filename where you would like to store your tweets: ");
-    scanf("%s", fileName);
+    fgets(fileName, 50, stdin);
+    fileName[strlen(fileName) - 1] = '\0';
 
     fptr = fopen(fileName, "w");
     

@@ -10,14 +10,15 @@ void loadTweetsFromFile(tweet ** tweetList)
 {
     srand(time(NULL));
     FILE *fptr = NULL;   
-    tweet * ptr;
+    tweet * ptr = NULL;
 
     char fileName[50];
     char string[300];
 
     // enter a file name
     printf("Enter a filename to load from: ");
-    scanf("%s", fileName);
+    fgets(fileName, 50, stdin);
+    fileName[strlen(fileName) - 1] = '\0';
 
     fptr = fopen(fileName, "r");
  
