@@ -12,7 +12,9 @@ Post: prints how many tweets were searched and how many stop words were found
 *******/
 void countStopWords(tweet * tweetList)
 {
-    char listOfWords[25][10];
+    char listOfWords[25][10] = { "a","an","and","are","as","at","be","by","for","from",
+                                 "has","he","in","is","it","its","of","on","that","the",
+                                 "to","was","were","will","with" };
     char textLower[142];
     int count = 0;
     tweet * temp = tweetList;
@@ -24,32 +26,6 @@ void countStopWords(tweet * tweetList)
         printf("NOTE: The list is empty.\n");
     }
 
-    strcpy(listOfWords[0], "a");
-    strcpy(listOfWords[1], "an");
-    strcpy(listOfWords[2], "and");
-    strcpy(listOfWords[3], "are");
-    strcpy(listOfWords[4], "as");
-    strcpy(listOfWords[5], "at");
-    strcpy(listOfWords[6], "be");
-    strcpy(listOfWords[7], "by");
-    strcpy(listOfWords[8], "for");
-    strcpy(listOfWords[9], "from");
-    strcpy(listOfWords[10], "has");
-    strcpy(listOfWords[11], "he");
-    strcpy(listOfWords[12], "in");
-    strcpy(listOfWords[13], "is");
-    strcpy(listOfWords[14], "it");
-    strcpy(listOfWords[15], "its");
-    strcpy(listOfWords[16], "of");
-    strcpy(listOfWords[17], "on");
-    strcpy(listOfWords[18], "that");
-    strcpy(listOfWords[19], "the");
-    strcpy(listOfWords[20], "to");
-    strcpy(listOfWords[21], "was");
-    strcpy(listOfWords[22], "were");
-    strcpy(listOfWords[23], "will");
-    strcpy(listOfWords[24], "with");
-    
     while (temp != NULL)
     {
         numberOfTweets++;
