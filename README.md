@@ -78,6 +78,9 @@ stream is from the command line itself (Menu Option 1). Alternatively, the user 
 CSV file of tweets into the program. A sample CSV file has been provided for you to test your programs with. Both
 of these inputs will feed into the same linked list structure, as defined above.
 
+#### IMPORTANT NOTE
+If the user decides to exit the program with saving the tweets (option 6), then all the information will be lost. 
+
 ## Limitations of the program
 
 The program covers the full scope of the assignment listed in the instructions and has no limitations. 
