@@ -20,20 +20,19 @@ Date of Last Revision: **2022/04/03**.
 ## Setup + Compile & Run
 
 ##### Clone the repo:
-    copyCodeBlock('<div>Thundercats</div>')
-    git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git
+    copyCodeBlock('<div>git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git</div>')
 
 ##### cd to the A3 directory the program:
-    cd A3
+    copyCodeBlock('<div>cd A3</div>')
 
 ##### compile the program using makefile:    
-    make    
+    copyCodeBlock('<div>make</div>')    
 
-##### run the executable:    
-    ./ladyjenkoMyronA3
+##### run the executable:   
+    copyCodeBlock('<div>./ladyjenkoMyronA3</div>')
 
 ##### clean all object files (.o) and the executable:
-    make clean     
+    copyCodeBlock('<div>make clean</div>')     
 
 ## Completed Components
 
