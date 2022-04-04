@@ -88,7 +88,7 @@ The program covers the full scope of the assignment listed in the instructions a
 ## Improvements
 
 #### Completed Improvements:
-1. Added an error checking for a wrong input for "Delete the nth tweet" function. Plus, was given an option to exit the function is the user doesn't want to delete any nodes. 
+1. Added an error checking for a wrong input for "Delete the nth tweet" function. Plus, was given an option to exit the function if the user doesn't want to delete any nodes. 
 
 #### Future Improvements:
 1. Check for the uniqueness of the id when loading from a .csv file.
