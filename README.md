@@ -28,7 +28,7 @@ Date of Last Revision: **2022/04/03**.
 ##### compile the program using makefile:    
     make    
 
-##### run the executable:   
+##### run the executable (ladyjenkoMyronA3):   
     ./ladyjenkoMyronA3
 
 ##### clean all object files (.o) and the executable:
