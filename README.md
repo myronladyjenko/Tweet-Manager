@@ -23,16 +23,16 @@ Date of Last Revision: **2022/04/03**.
     git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git
 
 ##### cd to the A3 directory the program:
-    copyCodeBlock('<div>cd A3</div>')
+    cd A3
 
 ##### compile the program using makefile:    
-    copyCodeBlock('<div>make</div>')    
+    make    
 
 ##### run the executable:   
-    copyCodeBlock('<div>./ladyjenkoMyronA3</div>')
+    ./ladyjenkoMyronA3
 
 ##### clean all object files (.o) and the executable:
-    copyCodeBlock('<div>make clean</div>')     
+    make clean    
 
 ## Completed Components
 
