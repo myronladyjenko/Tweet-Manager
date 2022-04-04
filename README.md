@@ -20,7 +20,7 @@ Date of Last Revision: **2022/04/03**.
 ## Setup + Compile & Run
 
 ##### Clone the repo:
-    copyCodeBlock('<div>git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git</div>')
+    git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git
 
 ##### cd to the A3 directory the program:
     copyCodeBlock('<div>cd A3</div>')
