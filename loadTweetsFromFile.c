@@ -8,7 +8,6 @@ Post: prints a succes message if the tweets were imported, and not otherwise.
 *******/
 void loadTweetsFromFile(tweet ** tweetList)
 {
-    srand(time(NULL));
     FILE *fptr = NULL;   
     tweet * ptr = NULL;
 
