@@ -74,9 +74,9 @@ int main()
 
                 case 3:
                     // printf("Calls: searchTweetsByKeyword.c\n");
-                    if (searchTweetsByKeyword(head) == -1)
+                    if (searchTweetsByKeyword(head) == 0)
                     {
-                        printf("No matches has been found\n");
+                        printf("No matches were found\n");
                     }
                     break;
 

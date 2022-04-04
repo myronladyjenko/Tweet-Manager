@@ -20,9 +20,12 @@ int searchTweetsByKeyword(tweet * tweetList)
 
     wordLower[0] = '0';
     textLower[0] = '0';
-
-    printf("Enter a keyword to search: ");
-    scanf("%s", word);
+    
+    do {
+        printf("Enter a keyword to search (non-zero length): ");
+        fgets(word, 50, stdin);
+        word[strlen(word) - 1] = '\0';
+    } while (strlen(word) == 0);
     
     // make the letters in the word be lowercase
     for (int i = 0; word[i] != '\0'; i++)

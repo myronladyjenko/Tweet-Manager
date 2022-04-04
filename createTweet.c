@@ -54,13 +54,13 @@ tweet * createTweet(tweet * tweetList)
          user[strlen(user) - 1] = '\0';
       } 
 
-      if (strlen(user) > 50 && user[50] != '\n')
+      if (strlen(user) != 0 && (strlen(user) > 50 && user[50] != '\n'))
       {
           flag = 1;
       }
       // printf("length: %d\n", strlen( user));
 
-   } while (strlen(user) > 50 && user[50] != '\n');
+   } while (strlen(user) == 0 || (strlen(user) > 50 && user[50] != '\n'));
     
    strcpy(ptr -> user, user); 
    flag = 0;
@@ -87,12 +87,12 @@ tweet * createTweet(tweet * tweetList)
          text[strlen(text) - 1] = '\0';
       } 
 
-      if (strlen(text) > 140 && text[140] != '\n')
+      if (strlen(text) != 0 && strlen(text) > 140 && text[140] != '\n')
       {
           flag = 1;
       }
 
-   } while (strlen(text) > 140 && text[140] != '\n');
+   } while (strlen(text) == 0 || (strlen(text) > 140 && text[140] != '\n'));
    
    strcpy(ptr -> text, text); 
    
