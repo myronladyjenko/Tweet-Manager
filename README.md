@@ -26,10 +26,13 @@ Date of Last Revision: **2022/04/03**.
     cd A3
 
 ##### compile the program using makefile:    
-    make
+    make    
 
 ##### run the executable:    
     ./ladyjenkoMyronA3
+
+##### clean all object files (.o) and the executable:
+    make clean     
 
 ## Completed Components
 
