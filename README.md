@@ -1,7 +1,6 @@
 ## Tweet Manager
 
-Tweet Manager is a simple application that allow the user to do the simple Twitter functionality. Tweet Manager for the 
-**Assignment 3**, course **CIS*2500** was completed in **C** by **Myron Ladyjenko** (username: **mladyjen**, id: **1172255**). 
+Tweet Manager is a simple application that allow the user to do the simple Twitter functionality. This application was completed in **C**. 
 
 The application has the following functionality: 
 
