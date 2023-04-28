@@ -19,12 +19,9 @@ Date of Last Revision: **2022/04/03**.
 ## Setup + Compile & Run
 
 ##### Clone the repo:
-    git clone https://git.socs.uoguelph.ca/2500W22/mladyjen/A3.git
+    git clone https://github.com/myronladyjenko/Tweet-Manager.git
 
-##### cd to the A3 directory the program:
-    cd A3
-
-##### compile the program using makefile:    
+##### cd to the Tweet-Manager directory the program; compile the program using makefile:    
     make    
 
 ##### run the executable (ladyjenkoMyronA3):   
